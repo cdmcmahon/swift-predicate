@@ -1,5 +1,5 @@
 extension Predicate {
-    static func never() -> Predicate<Any> {
-        return Predicate<Any> { _ in false }
+    static func never() -> Predicate<T> {
+        return Predicate<T> { _ in false }
     }
 }
