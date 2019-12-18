@@ -13,5 +13,7 @@ final class PredicateTests: XCTestCase {
     func testPredicateFalse() {
         XCTAssertFalse(PredicateTests.isEven.test(1))
         XCTAssertFalse(PredicateTests.isOdd.test(2))
+        // Intentionally adding failing test to test CI
+        XCTAssertTrue(PredicateTests.isEven(1))
     }
 }
