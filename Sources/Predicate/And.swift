@@ -1,5 +1,9 @@
 extension Predicate {
+    static func and(_ first: Predicate<T>, _ second: Predicate<T>) -> Predicate<T> {
+        Predicate<T> { val in first.test(val) && second.test(val) }
+    }
+
     func and(_ other: Predicate<T>) -> Predicate<T> {
-        return Predicate { val in self.test(val) && other.test(val) }
+        Predicate { val in Predicate.and(self, other).test(val) }
     }
 }
