@@ -1,7 +1,7 @@
 import XCTest
 
-import swift_predicateTests
+import PredicateTests
 
 var tests = [XCTestCaseEntry]()
-tests += swift_predicateTests.allTests()
+tests += PredicateTests.allTests()
 XCTMain(tests)
