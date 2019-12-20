@@ -22,4 +22,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Docker Build
-        run: docker build --tag predicate-testing . && docker run --rm predicate-testing
+        run: docker build --tag predicate-testing .
+        run: docker run --rm predicate-testing
