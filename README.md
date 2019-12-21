@@ -60,7 +60,7 @@ return !user.email.isEmpty && !user.password.isEmpty
 
 `Predicate` is designed to be easily composable, so that larger, more complicated predicates can be created from small, simple, reusable ones. For example, `Predicate` provides nice ergonomics to modify a `Predicate` or combine a `Predicate<T>` with another of its same type:
 
-```
+```swift
 let isEven = Predicate<Int> { $0 % 2 == 0 }
 let isOdd = isEven.negate()
 let isEvenAndGreaterThanTen = isEven.and { $0 > 10 }
@@ -91,6 +91,6 @@ The Predicate type is made to play well with collections.
 
 ## Credits
 
-This library was created with heavy inspiration from [pointfree.co](http://www.pointfree.co). The abstraction of a function interface into a data type follows a pattern frequently used in [the code samples in their video series](https://github.com/pointfreeco/episode-code-samples).
+This library was created with heavy inspiration from [pointfree.co](http://www.pointfree.co). The abstraction of a function interface into a data type follows a pattern frequently used in their video series. ([Code samples here](https://github.com/pointfreeco/episode-code-samples).)
 
 Inspiration was also taken from the [`Predicate` functional interface in `java.util.function`](https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html) and the ergonomics were often designed to mimic that library. 
