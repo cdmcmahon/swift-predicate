@@ -47,12 +47,12 @@ let isEven = Predicate<Int> { $0 % 2 == 0 }
 let isEmpty = Predicate<String> { $0.isEmpty }
 
 struct User {
-var email: String
-var password: String
+  var email: String
+  var password: String
 }
 
 let hasSetUpProfile = Predicate<User> { user in
-return !user.email.isEmpty && !user.password.isEmpty
+  return !user.email.isEmpty && !user.password.isEmpty
 }
 ```
 
