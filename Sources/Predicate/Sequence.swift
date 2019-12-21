@@ -40,4 +40,12 @@ extension Sequence {
     func map(_ predicate: Predicate<Self.Element>) -> [Bool] {
         return self.map(predicate.test)
     }
+    
+    /// Returns the number of items in the array matching the predicate
+    /// - Parameter predicate: A predicate object containing a test function for objects of type Self.Element
+    func count(where predicate: Predicate<Self.Element>) -> Int {
+        return self.reduce(0) { result, element in
+            return result + (predicate.test(element) ? 1 : 0)
+        }
+    }
 }
