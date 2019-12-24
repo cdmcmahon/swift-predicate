@@ -1,3 +1,3 @@
-struct Predicate<T> {
+public struct Predicate<T> {
     let test: (T) -> Bool
 }

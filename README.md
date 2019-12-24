@@ -5,6 +5,16 @@
 
 A library for treating predicates as first-class data types.
 
+## Usage
+
+Use  `swift-predicate` with [SwiftPM](https://swift.org/package-manager/), by adding it as a dependencie to your `Package.swift` configuration:
+
+```swift
+dependencies: [
+  .package(url: "https://github.com/cdmcmahon/swift-predicate.git", from: "0.1.0")
+]
+```
+
 ## About
 
 Programs written in swift make frequent use of predicates. For example, they are commonly used to filter collections:
@@ -63,6 +73,7 @@ let hasSetUpProfile = Predicate<User> { user in
 ```swift
 let isEven = Predicate<Int> { $0 % 2 == 0 }
 let isOdd = isEven.negate()
+let isFoo = Predicate.equalTo("foo")
 let isEvenAndGreaterThanTen = isEven.and { $0 > 10 }
 let isOddOrGreaterThanTen = isOdd.or { $0 > 10 }
 let isEvenXorGreaterThanTen = isEven.xor { $0 > 10 }
