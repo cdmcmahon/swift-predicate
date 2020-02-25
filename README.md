@@ -7,7 +7,7 @@ A library for treating predicates as first-class data types.
 
 ## Usage
 
-Use  `swift-predicate` with [SwiftPM](https://swift.org/package-manager/), by adding it as a dependencie to your `Package.swift` configuration:
+Use  `swift-predicate` with [Swift Package Manager](https://swift.org/package-manager/), by adding it as a dependency to your `Package.swift` configuration:
 
 ```swift
 dependencies: [
