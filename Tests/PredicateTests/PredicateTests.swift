@@ -15,7 +15,6 @@ final class PredicateTests: XCTestCase {
     XCTAssertFalse(PredicateTests.isOdd.test(2))
   }
 
-  @available(swift 5.2)
   func testCallableValue() {
     XCTAssertTrue(PredicateTests.isOdd(1))
     XCTAssertFalse(PredicateTests.isEven(1))
