@@ -1,3 +1,5 @@
+import Predicate
+
 extension Array {
   /// Returns the first index in which an element of the collection satisfies the given predicate.
   /// - Parameter predicate: A predicate object containing a test function for objects of type Element

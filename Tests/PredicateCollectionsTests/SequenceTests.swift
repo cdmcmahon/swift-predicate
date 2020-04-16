@@ -1,5 +1,6 @@
 import XCTest
 @testable import Predicate
+@testable import PredicateCollections
 
 final class SequenceTests: XCTestCase {
   let sequence: AnySequence = AnySequence([1,2,3,4])

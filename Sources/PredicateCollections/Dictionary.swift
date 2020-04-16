@@ -1,3 +1,5 @@
+import Predicate
+
 extension Dictionary {
   /// Returns a new dictionary containing the key-value pairs of the dictionary that satisfy the given predicate.
   /// - Parameter predicate: A predicate object containing a test function for the a key value tuple

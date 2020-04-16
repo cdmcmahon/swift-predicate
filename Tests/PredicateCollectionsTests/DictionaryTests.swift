@@ -1,5 +1,6 @@
 import XCTest
 @testable import Predicate
+@testable import PredicateCollections
 
 final class DictionaryTests: XCTestCase {
   let dict: Dictionary<String, Int> = [

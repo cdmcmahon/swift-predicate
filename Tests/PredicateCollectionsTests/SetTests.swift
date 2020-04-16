@@ -1,5 +1,6 @@
 import XCTest
 @testable import Predicate
+@testable import PredicateCollections
 
 final class SetTests: XCTestCase {
   let set: Set = [1,2,3,4]

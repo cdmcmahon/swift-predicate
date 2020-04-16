@@ -1,3 +1,5 @@
+import Predicate
+
 extension Sequence {
   /// Returns an array containing, in order, the elements of the sequence that satisfy the given predicate.
   /// - Parameter predicate: A predicate object containing a test function for objects of type Self.Element
