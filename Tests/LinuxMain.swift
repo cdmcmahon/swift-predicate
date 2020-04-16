@@ -1,10 +1,10 @@
 import XCTest
 
-import PredicateTests
 import PredicateCollectionsTests
+import PredicateTests
 
 var tests = [XCTestCaseEntry]()
-tests += PredicateTests.__allTests()
 tests += PredicateCollectionsTests.__allTests()
+tests += PredicateTests.__allTests()
 
 XCTMain(tests)
