@@ -10,9 +10,9 @@ on:
 
 jobs:
   mac_test:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Build
         run: swift build -v
       - name: Run tests
@@ -20,7 +20,7 @@ jobs:
   linux_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Docker Build
         run: docker build --tag predicate-testing .
       - name: Docker Run
