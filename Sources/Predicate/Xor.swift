@@ -6,8 +6,6 @@ extension Predicate {
   }
   
   public func xor(_ other: Predicate<T>) -> Predicate<T> {
-    return Predicate { val in
-      return Predicate.xor(self, other).test(val)
-    }
+    return Predicate.xor(self, other)
   }
 }

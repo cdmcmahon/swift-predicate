@@ -7,8 +7,6 @@ extension Predicate {
   }
   
   public func or(_ other: Predicate<T>) -> Predicate<T> {
-    return Predicate<T> { val in
-      return Predicate.or(self, other).test(val)
-    }
+    return Predicate.or(self, other)
   }
 }

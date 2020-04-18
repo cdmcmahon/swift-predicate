@@ -6,8 +6,6 @@ extension Predicate {
   }
   
   public func and(_ other: Predicate<T>) -> Predicate<T> {
-    return Predicate { val in
-      Predicate.and(self, other).test(val)
-    }
+    return Predicate.and(self, other)
   }
 }

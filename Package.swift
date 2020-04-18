@@ -8,9 +8,9 @@ let package = Package(
     .library(
       name: "Predicate",
       targets: ["Predicate"]),
-//    .library(
-//      name: "BiPredicate",
-//      targets: ["BiPredicate"]),
+    .library(
+      name: "BiPredicate",
+      targets: ["BiPredicate"]),
     .library(
       name: "PredicateCollections",
       targets: ["PredicateCollections"]),
@@ -19,17 +19,20 @@ let package = Package(
     .target(
       name: "Predicate",
       dependencies: []),
-//    .target(
-//      name: "BiPredicate",
-//      dependencies: []),
+    .testTarget(
+      name: "PredicateTests",
+      dependencies: ["Predicate"]),
+    .target(
+      name: "BiPredicate",
+      dependencies: []),
+    .testTarget(
+      name: "BiPredicateTests",
+      dependencies: ["BiPredicate"]),
     .target(
       name: "PredicateCollections",
       dependencies: ["Predicate"]),
     .testTarget(
-      name: "PredicateTests",
-      dependencies: ["Predicate"]),
-    .testTarget(
-    name: "PredicateCollectionsTests",
-    dependencies: ["PredicateCollections"]),
+      name: "PredicateCollectionsTests",
+      dependencies: ["PredicateCollections"])
   ]
 )
