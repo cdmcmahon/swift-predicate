@@ -24,7 +24,7 @@ let package = Package(
       dependencies: ["Predicate"]),
     .target(
       name: "BiPredicate",
-      dependencies: []),
+      dependencies: ["Predicate"]),
     .testTarget(
       name: "BiPredicateTests",
       dependencies: ["BiPredicate"]),
