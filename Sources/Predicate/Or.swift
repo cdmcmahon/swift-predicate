@@ -9,4 +9,8 @@ extension Predicate {
   public func or(_ other: Predicate<T>) -> Predicate<T> {
     return Predicate.or(self, other)
   }
+  
+  public static func || (left: Predicate<T>, right: Predicate<T>) -> Predicate<T> {
+    return left.or(right)
+  }
 }

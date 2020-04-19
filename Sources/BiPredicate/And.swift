@@ -8,4 +8,8 @@ extension BiPredicate {
   public func and(_ other: BiPredicate<A, B>) -> BiPredicate<A, B> {
     return BiPredicate.and(self, other)
   }
+  
+  public static func && (left: BiPredicate<A, B>, right: BiPredicate<A, B>) -> BiPredicate<A, B> {
+    return left.and(right)
+  }
 }

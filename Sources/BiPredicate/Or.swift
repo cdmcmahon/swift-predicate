@@ -11,4 +11,8 @@ extension BiPredicate {
   public func or(_ other: BiPredicate<A, B>) -> BiPredicate<A, B> {
     return BiPredicate.or(self, other)
   }
+  
+  public static func || (left: BiPredicate<A, B>, right: BiPredicate<A, B>) -> BiPredicate<A, B> {
+    return left.or(right)
+  }
 }

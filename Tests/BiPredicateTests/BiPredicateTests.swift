@@ -1,22 +1,22 @@
 import XCTest
 @testable import BiPredicate
 
-final class PredicateTests: XCTestCase {
-  static var bothAreEven: BiPredicate<Int, Int> = BiPredicate { a, b in a % 2 == 0 && a % 2 == 0 }
-  static var bothAreOdd: BiPredicate<Int, Int> = BiPredicate { a, b in a % 2 == 1 && a % 2 == 1 }
+final class BiPredicateTests: XCTestCase {
+  static var bothAreEven: BiPredicate<Int, Int> = BiPredicate { a, b in a % 2 == 0 && b % 2 == 0 }
+  static var bothAreOdd: BiPredicate<Int, Int> = BiPredicate { a, b in a % 2 == 1 && b % 2 == 1 }
   
   func testBiPredicateTrue() {
-    XCTAssertTrue(PredicateTests.bothAreOdd.test(1, 3))
-    XCTAssertTrue(PredicateTests.bothAreEven.test(2, 4))
+    XCTAssertTrue(BiPredicateTests.bothAreOdd.test(1, 3))
+    XCTAssertTrue(BiPredicateTests.bothAreEven.test(2, 4))
   }
   
   func testBiPredicateFalse() {
-    XCTAssertFalse(PredicateTests.bothAreEven.test(1, 2))
-    XCTAssertFalse(PredicateTests.bothAreOdd.test(2, 3))
+    XCTAssertFalse(BiPredicateTests.bothAreEven.test(1, 2))
+    XCTAssertFalse(BiPredicateTests.bothAreOdd.test(2, 3))
   }
 
   func testCallableValue() {
-    XCTAssertTrue(PredicateTests.bothAreOdd(1, 1))
-    XCTAssertFalse(PredicateTests.bothAreEven(1, 2))
+    XCTAssertTrue(BiPredicateTests.bothAreOdd(1, 1))
+    XCTAssertFalse(BiPredicateTests.bothAreEven(1, 2))
   }
 }

@@ -19,4 +19,13 @@ final class AndTests: XCTestCase {
     XCTAssertFalse(bothGreaterThanZero.and(bothGreaterThanTen).test(5, 20.12))
     XCTAssertFalse(bothGreaterThanZero.and(bothGreaterThanTen).test(-5, 5.5))
   }
+  
+  func testOperator() {
+    let bothGreaterThanZero: BiPredicate<Int, Int> = BiPredicate { a, b in a > 0 && b > 0 }
+    let bothGreaterThanTen: BiPredicate<Int, Int> = BiPredicate { a, b in a > 10 && b > 10 }
+    XCTAssertTrue((bothGreaterThanZero && bothGreaterThanTen).test(20, 12))
+    XCTAssertFalse((bothGreaterThanZero && bothGreaterThanTen).test(20, 5))
+    XCTAssertFalse((bothGreaterThanZero && bothGreaterThanTen).test(5, 20))
+    XCTAssertFalse((bothGreaterThanZero && bothGreaterThanTen).test(-5, 5))
+  }
 }

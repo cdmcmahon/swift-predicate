@@ -9,4 +9,12 @@ final class AndTests: XCTestCase {
     XCTAssertFalse(greaterThanZero.and(greaterThanTen).test(5))
     XCTAssertFalse(greaterThanZero.and(greaterThanTen).test(-5))
   }
+  
+  func testAndOperator() {
+    let greaterThanZero: Predicate<Int> = Predicate { val in val > 0 }
+    let greaterThanTen: Predicate<Int> = Predicate { val in val > 10 }
+    XCTAssertTrue((greaterThanZero && greaterThanTen).test(20))
+    XCTAssertFalse((greaterThanZero && greaterThanTen).test(5))
+    XCTAssertFalse((greaterThanZero && greaterThanTen).test(-5))
+  }
 }
